@@ -51,6 +51,7 @@ app.get('/login', (req, res) => {
   res.sendFile(__dirname + '/views/login.html');
 })
 
+
 app.get('/api/getuser', (req, res) => {
   res.json({"name": "Eddie"});
 })
