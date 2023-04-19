@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="output.css">
-</head>
-<body>
+<%- include('partials/head', {title: "Logged in"}); %>
+    
     <h1>Grattis <span style="<%= style %>"> <%= name %> </span> du är inloggad </h1>
 
-    <button onclick="getUserName()">Button</button>
+    <button class="mt-8 px-4 py-2 bg-blue-300 text-white" onclick="getUserFavoriteColor()">Hämta favorit-färg</button>
     <script>
-        function getUserName(){
-            fetch('http://localhost:4000/api/getuser')
+        function getUserFavoriteColor(){
+            fetch('http://localhost:4000/api/getfavoritecolor')
             .then(data =>{
                 return data.json();
             })
@@ -22,5 +14,5 @@
             })
         }
     </script>
-</body>
-</html>
+
+<%- include('partials/footer'); %>

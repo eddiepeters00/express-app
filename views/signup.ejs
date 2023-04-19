@@ -1,0 +1,24 @@
+<%- include('partials/head', {title: "Sign up"}); %>
+
+<h1>Create New User</h1>
+
+<form method="POST" action="/users">
+    <label>
+    Name:
+    <input type="text" name="name">
+    </label>
+    <br>
+    <label>
+    Email:
+    <input type="email" name="email">
+    </label>
+    <br>
+    <label>
+    Password:
+    <input type="password" name="password">
+    </label>
+    <br>
+    <button type="submit">Create User</button>
+</form>
+
+<%- include('partials/footer'); %>
