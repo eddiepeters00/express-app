@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 4000
+const port = 4000;
 const mysql = require('mysql');
 const session = require('express-session');
 
@@ -123,13 +123,6 @@ app.post('/login', (req, res) => {
   });
 })
 
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-});
-
-
-
 // SIGN UP
 app.get('/signup', (req, res) => {
   res.render('signup')
@@ -157,3 +150,8 @@ app.post('/users', (req, res) => {
 app.listen(port, () => {
 console.log(`Example app listening on port ${port}`)
 })
+
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
